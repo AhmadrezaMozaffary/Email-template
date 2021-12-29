@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: linear-gradient(to top left, #39b385, #9be15d);
+        --single-primary-color: #5ec576;
+        --form-bg: rgba(255, 255, 255, 0.74);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      html {
+        width: 100%;
+        height: 100%;
+        font-size: 62.5%;
+      }
+      body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -4;
+      }
+      body::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-color);
+        opacity: 0.7;
+        z-index: -5;
+      }
+      .msg {
+        width: 40%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 2em;
+        background: var(--form-bg);
+        border: rgba(53, 207, 192, 0.712) 1px solid;
+        box-shadow: 0px 0px 40px var(--form-bg);
+      }
+      .header-msg {
+        width: 100%;
+        height: 20%;
+        position: relative;
+        background: var(--primary-color);
+        opacity: 0.8;
+      }
+      .header-msg h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        font-weight: lighter;
+        font-size: 1.2rem;
+      }
+      .name {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-shadow: 0.5px 0.5px 5px rgb(255, 255, 255);
+      }
+      .body-msg {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .show-msg p {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: 2%;
+      }
+      .code {
+        margin-top: 1rem;
+      }
+      .show-msg p:last-child {
+        width: 80%;
+        margin: 1.5rem auto;
+        font-weight: lighter;
+      }
+      .seprator {
+        width: 80%;
+        height: 2px;
+        background: #444;
+        margin: 4% auto 0 auto;
+        opacity: 0.15;
+      }
+      .footer {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+      @media screen and (min-width: 1023px) {
+        .msg {
+          width: 35%;
+        }
+        .header-msg h1 {
+          font-size: 2.5rem;
+        }
+        .name {
+          font-size: 3rem;
+        }
+        .show-msg p {
+          font-size: 1.1rem;
+        }
+        .footer {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+    <title>Belfius Banking - Message</title>
+  </head>
+  <body>
+    <section class="msg">
+      <header class="header-msg">
+        <h1>Hello dear <span class="name">name</span></h1>
+      </header>
+      <section class="body-msg">
+        <div class="show-msg">
+          <p>Use the code below for reset your password</p>
+          <h3 class="code">CODE</h3>
+          <div class="seprator"></div>
+          <p>
+            If you don't tried to change your password, easily get rid of this
+            message &#128518;
+          </p>
+        </div>
+      </section>
+      <footer class="footer">BELFIUS banking &copy;</footer>
+    </section>
+  </body>
+</html>
